@@ -1,0 +1,4 @@
+settle means resolve or reject
+
+resolve means promises has settled successfully
+reject means promises has not settled successfully

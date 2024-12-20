@@ -1,0 +1,303 @@
+//1. way to print js
+// 2. js console api
+// console.log("hello world")
+// document.write("this is document write")
+
+// 3. js variable
+// container to store data value
+var number1 = 34;
+var number2 = 56;
+// console.log("number1 + number2")
+
+// 4. data types in js
+// number data types
+var num1 = 455;
+var num2 = 56.76;
+
+// string data types
+var str1 = "this is a string"
+var str2 = "this is also a string"
+
+// object data types (key value pair)
+var marks = {
+    ravi: 34,
+    shubham: 78,
+    harry: 99.77
+}
+// console.log(marks)
+
+// Booleans
+var a = true;
+var b = false;
+// console.log(a, b)
+
+// undefined
+var und = undefined;
+var und;
+// console.log(und);
+/*
+// At a very high level, there are two types of data types in javascript
+// 1. primitive data types: undefined, number, null, string,boolean, symbol
+// 2. refrence data types: arrays and objects
+
+*/
+var arr = [1, 2, "shiv", 3, 4, 5]
+// console.log(arr)
+
+// Operators in JavaScript 
+// arithmetic operator
+var a = 100;
+var b = 10;
+//  console.log("The value of a + b is ", a+b)
+//  console.log("The value of a - b is ", a-b)
+//  console.log("The value of a * b is ", a*b)
+//  console.log("The value of a / b is ", a/b)
+
+// Assignment Operator
+// var c=b;
+//  c -= 2; 
+// //   c = c - 2;
+// c *= 2;
+// // c = c * 2;
+// console.log(c);
+
+// comparison operator
+var x = 34;
+var y = 56;
+//  console.log(x == y);
+//  console.log(x >= y);
+//  console.log(x <= y);
+
+// logical operator(boolean based)
+// logical And
+// console.log(true && true)
+// console.log(true && false)
+// console.log(false && false)
+// logical Or
+// console.log(true || true)
+// console.log(true || false)
+// console.log(false || false)
+
+// logical Not
+// console.log(!true);
+// console.log(!false);
+
+// function in JavaScript
+function avg(a, b) {
+
+    c = (a + b) / 2;
+    return c;
+    // DRY= Do not repeat yourself
+}
+c1 = avg(4, 6);
+c2 = avg(14, 16);
+// console.log(c1, c2);
+
+// conditionals in Javascript
+/*
+var age = 34;
+// if else statement
+// if (age>8){
+//     console.log('You are not a Kid')
+// }
+// else{
+//     console.log('You are a Kid')
+// }
+
+age = 25;
+// if-else ladder
+if(age >32){
+    console.log('You are not a kid')
+}
+else if(age >26){
+    console.log("your not a kid now")
+}
+else if(age >18){
+   console.log("your not now 18years")
+}
+else{
+    console.log("your child now")
+}
+console.log("End of ladder")
+*/
+var arr = [1, 2, 3, 4, 5, 6, 7];
+// console.log(arr);
+// for(var i =0; i<arr.length; i++){
+//     if(i==2){
+//         // break;
+//         continue;
+//     }
+//     console.log(arr[i])
+// }
+
+// To iterate array "for each loop" good technique
+// arr.forEach(function(element){
+//     console.log(element);
+// })
+
+
+// while loop
+// let j = 0;
+// while (j < arr.length) {
+//     console.log(arr[j]);
+//     j++;
+// }
+// // Do While Loop
+// do {
+//     console.log(arr[j]);
+//     j++;
+
+// } while (j < arr.length); 
+
+let myArr =["fan", "camera", 34, null, true];
+// Array methods push and pop operation
+
+// console.log(myArr.length);
+// myArr.pop();
+// myArr.push("shiv");
+
+// shift is remove a starting element of array & unshift is add a starting element of array
+// myArr.shift()
+// myArr.unshift("shiv");
+// console.log(myArr.unshift("shiv"));
+// const newLen = myArr.unshift("shiv");
+// console.log(newLen);
+// console.log(myArr);
+// myArr.toString()
+// myArr.sort()
+// for more details of array method of js visit MDN web
+
+// String Methods in JavaScript
+// let myLovelyString = "SHIV IS A GOOD BOY GOOD GOOD";
+// console.log(myLovelyString.length);
+// console.log(myLovelyString.indexOf("GOOD"));
+// console.log(myLovelyString.lastIndexOf("GOOD"))
+// console.log(myLovelyString.slice(0,3));
+// D = myLovelyString.replace("SHIV", "VISHAL");
+// d = D.replace("GOOD", "BAD");
+// console.log(d, D);
+
+let myDate = new Date();
+// console.log(myDate);
+//  console.log(myDate.getTime); in second
+// console.log(myDate.getDay());
+// console.log(myDate.getFullYear());
+// console.log(myDate.getMinutes());
+
+
+// DOM Manipulation
+let elem = document.getElementById('click');
+// console.log(elem);
+
+let elemclass = document.getElementsByClassName("container");
+// console.log(elemclass);
+// elemclass[0].style.background = "yellow";
+
+// technique of adding class
+elemclass[0].classList.add("bg-primary"); 
+elemclass[0].classList.add("text-success");
+elemclass[0].classList.remove("text-success");
+
+
+// console.log(elem.innerHTML);
+// console.log(elem.innerText);
+
+// // properties to print element of html
+// console.log(elemclass[0].innerHTML);
+// console.log(elemclass[0].innerText);
+
+tn = document.getElementsByTagName('div');
+// console.log(tn);
+tn = document.getElementsByTagName('button');
+// console.log(tn)
+
+// creating an Element using JS
+createdElement = document.createElement('p');
+createdElement.innerText = "This is a created para";
+
+createdElement2 = document.createElement('b');
+createdElement2.innerText = "This is a created bold";
+// adding child 
+tn[0].appendChild(createdElement);
+tn[0].replaceChild(createdElement2, createdElement);
+
+// removeChild(element);   removes an element
+
+// Selecting using quary || very useful in CSS
+// sel = document.querySelector('.container');
+// console.log(sel);
+// sel = document.querySelectorAll('.container');
+// console.log(sel);
+
+// events in javascript
+// function clicked(){
+//     console.log('The button was clicked')
+// }
+// window.onload = function(){
+//     console.log('The document was loaded')
+// }
+// // firstcontainer.addEventListener('click', function(){
+// //     document.querySelectorAll('.container')[1].innerHTML = "<b> We have clicked</b>"
+// //     console.log("Clicked on Container")
+// // })
+// // firstContainer.addEventListener('mouseover', function(){
+// //     console.log("mouse on Container")
+// // })
+// // firstContainer.addEventListener('mouseout', function(){
+// //     console.log("mouse out of Container");
+// // })
+
+
+// prevHtml is a variable
+// let prevHtml = document.querySelectorAll('.container')[1].innerHTML ;
+// firstcontainer.addEventListener('mouseup', function(){
+//     document.querySelectorAll('.container')[1].innerHTML = prevHtml;
+//     console.log("mouse up when clicked on Container");
+// })
+// firstcontainer.addEventListener('mousedown', function(){
+//     document.querySelectorAll('.container')[1].innerHTML = "<b> We have clicked</b>"
+//     console.log("mouse down when clicked on Container");
+// })
+
+
+// Arrow Function : Arrow function use when need to insert function
+function summ(a, b){
+    return a+b;
+}
+summ = (a, b)=>{
+  return a+b; 
+}
+// setTimeout and setinterval
+logKaro = ()=>{
+    document.querySelectorAll('.container')[1].innerHTML = "<b> set interval fired</b>"
+    console.log("I am Your log")
+}
+// setTimeout(logKaro, 2000);
+// setInterval(logKaro, 2000);
+// clearinterval(clr)
+// clearTimeout(clr)
+// use clearIntervl(clr)/clearTimeout(clr) to cancel setInterval/setTimeout
+// clr = setInterval(logKaro, 2000)
+
+// javascript local storage
+// localStorage.setItem('name', 'harry')
+// undefined
+// localStorage
+// Storage {name: 'harry', length: 1}name: "harry"length: 1[[Prototype]]: Storage
+// localStorage.getItem('name')
+// 'harry'
+// localStorage.removeItem('name')
+// localStorage.clear()
+
+// jSON 
+// obj = {name: "harry", length:1, a: {this: 'tha"t'}}
+// jso = JSON.stringify(obj);
+// console.log(typeof jso)
+// console.log(jso)
+
+// parsed = JSON.parse('{"name":"harry","length":1,"a":{"this":"that"}}')
+// console.log(parsed);
+
+// Template literals - Backticks
+a = 34;
+console.log(`this is my ${a}`)
